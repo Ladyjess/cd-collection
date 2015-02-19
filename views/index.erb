@@ -3,7 +3,7 @@
 <div class="form-group">
   <form action="/user" method="post">
 
-    <label for="User">Add new user</label>
+    <label for="User">Add a new user: </label>
     <input id="user_name" name="user_name" type="text">
     <button type="submit" class="btn btn-danger">Add User</button>
   </form>
@@ -11,6 +11,6 @@
 
 <ul>
 <% @users.each do |user| %>
-<li><a href="/user/<%= user.id() %>"><%= user.user_name() %></a></li>
+<li class="user"><a href="/user/<%= user.id() %>"><%= user.user_name() %></a></li>
 <% end %>
 </ul>
