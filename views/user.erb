@@ -1,0 +1,22 @@
+<h1>Welcome to the collection of <%= @user.user_name %></h1>
+
+<form action="/cds" method="post">
+  <input id="" name="user_id" value="<%= @user.id %>" type="hidden">
+
+  <label for="artist">Enter artist:</label>
+  <input id="artist" name="artist" type="text">
+
+  <label for="title">Enter title:</label>
+  <input id="title" name="title" type="text">
+
+  <button type="submit">Add it!</button>
+
+
+<% @cds.each do |cd| %>
+
+<ul>
+   <li class="artist"><%= cd.artist %></li>
+   <li class="title"><%= cd.title %> </li>
+</ul>
+
+<% end %>
